@@ -16,6 +16,17 @@ init	KEYWORD2
 connect	KEYWORD2
 disconnect	KEYWORD2
 send	KEYWORD2
+SENSOR	KEYWORD2
+SENSOR_RX	KEYWORD2
+BEACON_LISTENER	KEYWORD2
+_0_5_Hz	KEYWORD2
+_1_Hz	KEYWORD2
+_2_Hz	KEYWORD2
+_4_Hz	KEYWORD2
+_8_Hz	KEYWORD2
+_16_Hz	KEYWORD2
+_32_Hz	KEYWORD2
+_64_Hz	KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################

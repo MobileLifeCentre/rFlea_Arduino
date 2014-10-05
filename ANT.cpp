@@ -154,8 +154,8 @@ void ANT::setchid(antConfiguration configuration)
   uint8_t msgbuf[6];
   msgbuf[0] = 0x51;
   msgbuf[1] = configuration.channelNR;      // Channel Number, 0x00 for HRM
-   msgbuf[2] = (configuration.deviceID & 0xFF00)>>8;    // Device Number MSB
-  msgbuf[3] = (configuration.deviceID & 0xFF);    // Device Number LSB
+  msgbuf[2] = (configuration.deviceID & 0xFF);    // Device Number LSB
+   msgbuf[3] = (configuration.deviceID & 0xFF00)>>8;    // Device Number MSB
  msgbuf[4] = configuration.deviceType;   // Device Type, 0x78 for HRM
   msgbuf[5] = configuration.txType;
   txMessage(msgbuf, 6);

@@ -17,6 +17,7 @@
 typedef uint8_t byte;
 
 struct antConfiguration {
+  byte rFlea_profile;
   byte channelNR;
   byte channelType;
   byte networkID;

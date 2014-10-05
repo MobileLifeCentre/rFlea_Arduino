@@ -1,5 +1,14 @@
 /*********************************************************************
+ * rFlea_Arduino library v1.0
+ * 5 october 2014
+ *
  * This is an example sketch for the rFlea Stiva ANT+ arduino compatible
+ *
+ * This example is known as Transmition only (TxOnly). It refers to the
+ * only ability of sending data to the phone, tablet or any other rFlea is
+ * set up correctly (Beacon_listener example). This set up can't receive 
+ * any data, this is useful for applications that don't need to receive and
+ * save energy preventing listenning. Low power configuration.
  * 
  * rFlea Stiva are prototyping boards with ultra low power wireless ANT:
  * Refer to http://www.thisisant.com/ for more information
@@ -15,8 +24,6 @@
  * 
  * The rFlea webapp must be downloded and installed in the device.
  * 
- * This example is known as Transmition only (TxOnly). It refers to the
- * only ability of sending data to the phone or tablet.
  * 
  * Ultra low power is achieved by only sending data. Use this example in
  * case of sensors or beacons.
@@ -26,6 +33,7 @@
 
 //rFlea Object and constructor.
 rFlea_Arduino rflea = rFlea_Arduino();
+unsigned int serialNumber;
 
 void setup() {
   //rFlea object uses Serial and need to be at 57600
@@ -49,12 +57,20 @@ void setup() {
   //Registrer the functions that will be called to help syncronisation 
   // and low power.
   rflea.register_onSync(onSync);
+  
+  //Set our SENSOR channel. SENSOR can oly transmit
+  rflea.rFlea_profile(SENSOR);
+  
+    //Get the unique serial number from this rFlea and print it
+  serialNumber=rflea.my_serial_number();
+  Serial.println(" ");
+  Serial.println(serialNumber);
 
   //Reset and Initialize the ANT+.
   rflea.init();
 
   //Connect!!
-  rflea.connect();
+  rflea.connect(SENSOR);
 }
 void loop() {
   //Update rFlea every loop.
@@ -88,9 +104,9 @@ void onSync(){
   message[3] = digitalRead(10);
   message[4] = digitalRead(11);
   message[5] = digitalRead(12);
-  message[6] = 10; //part of the MAC adress
-  message[7] = 10; //part of the MAC adress
-  rflea.send(message);
+  message[6] = 0; //Empty
+  message[7] = 0; //Empty
+  rflea.send(SENSOR,message);
 }
 
 
