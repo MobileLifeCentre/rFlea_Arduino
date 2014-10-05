@@ -23,8 +23,8 @@ Examples
 ------------
 These libraries come with several examples on how to use the library. You can find them in File->Examples->rFlea_Arduino 
 
-- rFlea_Android_TxOnly: this example sets up your rFlea to send the value of the digital inputs 3,10,11,12 and analog inputs A4 and A5 to your Android phone (refer to this coming soon  repo with the app). 
+- rFlea_Android_TxOnly: this example sets up your rFlea to send the value of the digital inputs 3,10,11,12 and analog inputs A4 and A5 to your Android phone (refer to this coming soon  repo with the app). It shows how to use the rFlea profile SENSOR for such application.
 
-- rFlea_Android_TxRx: this example sets up your rFlea to send the value of the digital inputs 3,10,11,12 and analog inputs A4 and A5 and control your LED and set A2 and A3 as digital outputs. (code still being developed and testet, receiving part not working)
+- rFlea_Android_TxRx: this example sets up your rFlea to send the value of the digital inputs 3,10,11,12 and analog inputs A4 and A5 and, on the other hand, will receive data and set the LED depending on the value of the first data parameter (ON/OFF).
 	
 	
