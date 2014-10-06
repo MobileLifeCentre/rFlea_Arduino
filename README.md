@@ -17,7 +17,7 @@ rFlea belongs to INSBITS STUDIO framework (www.insbits.com). Insbits is a framew
 
 Installation
 ------------
-Download the library, unzip it, and put it in the folder libraries from your Arduino IDE workspace folder. Remember to re-start Arduino IDE to see the changes.
+Download the library, unzip it, change the name to "rFlea_Arduino" (Github adds "rFlea_Arduino-master", remove the "-master") and put it in the folder libraries from your Arduino IDE workspace folder. Remember to re-start Arduino IDE to see the changes.
 
 Examples
 ------------
