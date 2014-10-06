@@ -61,8 +61,9 @@ void setup() {
   //rflea.set_beacon_serial_number(your_ID_HERE); //Set the serial number of your beacon if needed. It will ONLY connect to this beacon. Otherwise will conenct to the first found.
   
   //Get the unique serial number from this rFlea and print it
-  serialNumber=rflea.my_serial_number(); //print the serial number of this board
+  serialNumber=rflea.my_serial_number();
   Serial.println(" ");
+  Serial.print("S/N: ");
   Serial.println(serialNumber);
   
   //Reset and Initialize the ANT+. We print the unic serial number for this board.

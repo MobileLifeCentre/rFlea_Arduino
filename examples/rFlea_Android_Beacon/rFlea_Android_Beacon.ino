@@ -53,6 +53,7 @@ void setup() {
   //Get the unique serial number from this rFlea and print it
   serialNumber=rflea.my_serial_number();
   Serial.println(" ");
+  Serial.print("S/N: ");
   Serial.println(serialNumber);
   
   //Reset and Initialize the ANT+.

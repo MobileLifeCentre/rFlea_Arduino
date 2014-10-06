@@ -26,5 +26,17 @@ These libraries come with several examples on how to use the library. You can fi
 - rFlea_Android_TxOnly: this example sets up your rFlea to send the value of the digital inputs 3,10,11,12 and analog inputs A4 and A5 to your Android phone (refer to this coming soon  repo with the app). It shows how to use the rFlea profile SENSOR for such application.
 
 - rFlea_Android_TxRx: this example sets up your rFlea to send the value of the digital inputs 3,10,11,12 and analog inputs A4 and A5 and, on the other hand, will receive data and set the LED depending on the value of the first data parameter (ON/OFF).
-	
+
+Step by Step Guide (Arduino standalone)
+------------
+1 Install Arudino libraries as indicated above. 
+
+2 Restart the Arduino IDE to refresh the libraries.
+
+3 Get your rFlea ready, together with an FTDI cable or board (https://www.sparkfun.com/products/9717).
+
+4 Flash the example and run it with the  Serial Monitor from Arduino IDE, in the very first lines, you will read "S/N: xxxxxx" where the x's are a number, that number is the unique serial number of the rFlea you are using, S/N stands for Serial number. Write it down in case you want to pair it exclusively with your phone or other rFlea's.
+
+5 Write you Arduino code as normal using the example of your chose as template.
+
 	

@@ -62,6 +62,12 @@ void setup() {
   //Set our SENSOR_RX channel. SENSOR_RX can transmit and receive
   rflea.rFlea_profile(SENSOR_RX);
   
+  //Get the unique serial number from this rFlea and print it
+  serialNumber=rflea.my_serial_number();
+  Serial.println(" ");
+  Serial.print("S/N: ");
+  Serial.println(serialNumber);
+  
   //Reset and Initialize the ANT+.
   rflea.init();
 
